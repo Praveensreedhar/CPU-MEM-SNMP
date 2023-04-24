@@ -1,0 +1,105 @@
+Juniper Commnds for cpu/memory/Temp
+
+Memory - show snmp mib walk jnxOperatingBuffer | match 9.1.0.0
+
+CPU - show snmp mib walk jnxOperatingCPU | match 9.1.0.0
+
+Temp - show snmp mib walk jnxOperatingTemp | match 9.1.0.0
+
+
+
+Temperature
+
+#show snmp mib walk jnxOperatingTemp
+
+output
+jnxOperatingTemp.1.1.0.0 = 0
+jnxOperatingTemp.1.2.0.0 = 0
+jnxOperatingTemp.2.1.0.0 = 0
+jnxOperatingTemp.2.2.0.0 = 0
+jnxOperatingTemp.2.3.0.0 = 0
+jnxOperatingTemp.2.4.0.0 = 0
+jnxOperatingTemp.4.1.0.0 = 0
+jnxOperatingTemp.4.2.0.0 = 0
+jnxOperatingTemp.4.3.0.0 = 0
+jnxOperatingTemp.4.4.0.0 = 0
+jnxOperatingTemp.4.5.0.0 = 0
+jnxOperatingTemp.4.6.0.0 = 0
+jnxOperatingTemp.4.7.0.0 = 0
+jnxOperatingTemp.4.8.0.0 = 0
+jnxOperatingTemp.7.1.0.0 = 0
+jnxOperatingTemp.7.6.0.0 = 0
+jnxOperatingTemp.8.1.1.0 = 0
+jnxOperatingTemp.8.6.1.0 = 0
+jnxOperatingTemp.9.1.0.0 = 28
+jnxOperatingTemp.9.1.1.0 = 0
+jnxOperatingTemp.9.2.0.0 = 28
+jnxOperatingTemp.9.2.1.0 = 0
+#show snmp mib get 1.3.6.1.4.1.2636.3.1.13.1.7.9.1.0.0
+result jnxOperatingTemp.9.1.0.0 = 28
+#show snmp mib get 1.3.6.1.4.1.2636.3.1.13.1.7.9.2.0.0
+jnxOperatingTemp.9.2.0.0 = 28
+
+-----------------------------------------
+CPU
+#show snmp mib walk jnxOperatingCPU
+jnxOperatingCPU.1.1.0.0 = 0
+jnxOperatingCPU.1.2.0.0 = 0
+jnxOperatingCPU.2.1.0.0 = 0
+jnxOperatingCPU.2.2.0.0 = 0
+jnxOperatingCPU.2.3.0.0 = 0
+jnxOperatingCPU.2.4.0.0 = 0
+jnxOperatingCPU.4.1.0.0 = 0
+jnxOperatingCPU.4.2.0.0 = 0
+jnxOperatingCPU.4.3.0.0 = 0
+jnxOperatingCPU.4.4.0.0 = 0
+jnxOperatingCPU.4.5.0.0 = 0
+jnxOperatingCPU.4.6.0.0 = 0
+jnxOperatingCPU.4.7.0.0 = 0
+jnxOperatingCPU.4.8.0.0 = 0
+jnxOperatingCPU.7.1.0.0 = 0
+jnxOperatingCPU.7.6.0.0 = 0
+jnxOperatingCPU.8.1.1.0 = 0
+jnxOperatingCPU.8.6.1.0 = 0
+jnxOperatingCPU.9.1.0.0 = 13
+jnxOperatingCPU.9.1.1.0 = 0
+jnxOperatingCPU.9.2.0.0 = 17
+jnxOperatingCPU.9.2.1.0 = 0
+
+#show snmp mib get 1.3.6.1.4.1.2636.3.1.13.1.8.9.1.0.0
+jnxOperatingCPU.9.1.0.0 = 12
+#show snmp mib get 1.3.6.1.4.1.2636.3.1.13.1.8.9.2.0.0
+jnxOperatingCPU.9.2.0.0 = 15
+
+-----------------------------------------------------
+Memory
+
+#show snmp mib walk jnxOperatingBuffer
+jnxOperatingBuffer.1.1.0.0 = 0
+jnxOperatingBuffer.1.2.0.0 = 0
+jnxOperatingBuffer.2.1.0.0 = 0
+jnxOperatingBuffer.2.2.0.0 = 0
+jnxOperatingBuffer.2.3.0.0 = 0
+jnxOperatingBuffer.2.4.0.0 = 0
+jnxOperatingBuffer.4.1.0.0 = 0
+jnxOperatingBuffer.4.2.0.0 = 0
+jnxOperatingBuffer.4.3.0.0 = 0
+jnxOperatingBuffer.4.4.0.0 = 0
+jnxOperatingBuffer.4.5.0.0 = 0
+jnxOperatingBuffer.4.6.0.0 = 0
+jnxOperatingBuffer.4.7.0.0 = 0
+jnxOperatingBuffer.4.8.0.0 = 0
+jnxOperatingBuffer.7.1.0.0 = 0
+jnxOperatingBuffer.7.6.0.0 = 0
+jnxOperatingBuffer.8.1.1.0 = 0
+jnxOperatingBuffer.8.6.1.0 = 0
+jnxOperatingBuffer.9.1.0.0 = 36
+jnxOperatingBuffer.9.1.1.0 = 0
+jnxOperatingBuffer.9.2.0.0 = 42
+jnxOperatingBuffer.9.2.1.0 = 0
+
+ #show snmp mib get 1.3.6.1.4.1.2636.3.1.13.1.11.9.1.0.0
+ jnxOperatingBuffer.9.1.0.0 = 36
+ #show snmp mib get 1.3.6.1.4.1.2636.3.1.13.1.11.9.2.0.0
+ jnxOperatingBuffer.9.2.0.0 = 42
+ 
