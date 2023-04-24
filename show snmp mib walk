@@ -1,0 +1,5 @@
+Memory - show snmp mib walk jnxOperatingBuffer | match 9.1.0.0
+
+CPU - show snmp mib walk jnxOperatingCPU | match 9.1.0.0
+
+Temp - show snmp mib walk jnxOperatingTemp | match 9.1.0.0
